@@ -10,6 +10,7 @@ const url = process.env.QUERY_URI;
 
 // fetch data and store it in database for node-cron
 const fetchAndStore = async ()=>{
+    console.log(url)
     try{
         const resp = (await (await fetch(url)).json());
         
