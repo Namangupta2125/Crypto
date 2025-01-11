@@ -8,10 +8,13 @@ const url = process.env.QUERY_URI;
 const fetchAndStore = async () => {
   try {
     const response = await fetch(url, {
-      headers: {
-        Accept: "application/json",
-         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
-      },
+     headers: {
+    "Accept": "application/json",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
+    "Referer": "https://www.coingecko.com",
+    "Origin": "https://www.coingecko.com"
+  }
+
     });
 
     if (!response.ok) {
