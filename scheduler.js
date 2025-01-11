@@ -12,6 +12,8 @@ const url = process.env.QUERY_URI;
 const fetchAndStore = async ()=>{
     console.log(url)
     try{
+        console.log('this is try block url')
+        console.log(url)
         const resp = (await (await fetch(url)).json());
         console.log('this working')
         console.log(resp)
