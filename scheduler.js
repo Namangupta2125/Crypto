@@ -5,7 +5,7 @@ require('dotenv').config();
 
 // url for fetch
 const url = process.env.QUERY_URI;
-const apiKey = process.env.API_KEY; // Get the API key from environment variables
+const apiKey = process.env.API_KEY; 
 
 // fetch data and store it in database for node-cron
 const fetchAndStore = async () => {
@@ -13,7 +13,7 @@ const fetchAndStore = async () => {
         const resp = await (await fetch(url, {
             method: 'GET',
             headers: {
-                'Authorization': `Bearer ${apiKey}`, // Add the API key in the request headers
+                'Authorization': `Bearer ${apiKey}`, 
             }
         })).json();
 
