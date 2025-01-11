@@ -29,7 +29,7 @@ https.createServer(
       cert: fs.readFileSync("./cert.pem"), 
     },
     app
-  ).listen(process.env.PORT || 3000, async () => {
+  ).listen(3000, async () => {
     await dbConfig();
     schedulerInit();
     console.log("server is listening....");
