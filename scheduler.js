@@ -13,6 +13,7 @@ const fetchAndStore = async ()=>{
     console.log(url)
     try{
         const resp = (await (await fetch(url)).json());
+        console.log('this working')
         console.log(resp)
         resp.forEach(async (data)=>{
             let savingName = data.name.toLowerCase();
