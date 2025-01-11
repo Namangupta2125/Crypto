@@ -14,7 +14,8 @@ const fetchAndStore = async ()=>{
     try{
         const rp = (await fetch(url));
         console.log(rp.headers)
-        cont resp = await rp.json();
+        console.log(rp.status)
+        const resp = await rp.json();
         
         console.log('this working')
         console.log(resp)
